@@ -13,8 +13,12 @@ namespace Examplinvi.ASP.NET.Controllers
 
         public ActionResult TwitterAuth()
         {
+            //var appCredentials = new TwitterCredentials("7qDmmaoHHfR4r5ktwLdeYBCOZ", "8c1Dl5shUvLRO8P3KuQPo2EzbMIWns5ZgbqjM6TgmxiFYA2gLK");
+            //var authenticationContext1 = AuthFlow.InitAuthentication(appCredentials);
+
             var appCreds = new ConsumerCredentials(MyCredentials.CONSUMER_KEY, MyCredentials.CONSUMER_SECRET);
             var redirectURL = "http://" + Request.Url.Authority + "/Home/ValidateTwitterAuth";
+            //var redirectURL = "http://127.0.0.1:5000/";
             var authenticationContext = AuthFlow.InitAuthentication(appCreds, redirectURL);
 
             return new RedirectResult(authenticationContext.AuthorizationURL);

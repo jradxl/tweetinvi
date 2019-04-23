@@ -279,3 +279,5 @@ __pycache__/
 /Developer Tools/nuget_packages/**/lib
 /Examplinvi.WindowsPhone
 *.bak
+
+MyCredentials.cs
